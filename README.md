@@ -7,7 +7,7 @@ port by Sorgelig and others) to the MEGA65, built on the
 [MiSTer2MEGA65](https://github.com/sy2002/MiSTer2MEGA65) framework (by sy2002 and MJoergen).
 The original framework README is in `M2M-README.md`.
 
-Status: **V0.1. Builds for the MEGA65 R6 with Vivado 2022.2 (timing met).**
+Status: **V0.1. Builds for the MEGA65 R6 and R3/R3A with Vivado 2022.2 (timing met).**
 
 **Works on a MEGA65 R6** (HDMI): the core starts, the options menu opens, cartridges load from
 the SD card and games play. The picture stays visible while the menu is open (the game keeps
@@ -35,7 +35,8 @@ VSYNC-25) the bottom of the screen is cut off, the same as on MiSTer. With "Orig
 (menu: Video and audio) the whole screen is shown correctly (confirmed on the R6).
 
 Not specifically confirmed yet: UA and CV detection, paddles, Superchip auto-detection, PAL
-colours, VGA output. R3/R4/R5 have not been built.
+colours, VGA output. R3/R3A: `release/a2600_r3.cor` builds (timing met) but has not been tested on
+an R3 yet. R4/R5 have not been built.
 
 Project layout
 --------------
@@ -114,7 +115,8 @@ Installing
 
 1. Create the folder `/atari2600` on the SD card for your cartridges (`.a26`/`.bin`, up to 64 KB).
 2. Copy `sdcard/atari2600/a26cfg` there too, so the menu settings are saved.
-3. Flash `release/a2600_r6.cor` with the MEGA65 core menu (MEGA65 R6 only; no R3 build yet).
+3. Flash `release/a2600_r6.cor` (MEGA65 R6) or `release/a2600_r3.cor` (R3/R3A, not yet tested on
+   hardware) with the MEGA65 core menu.
 
 Building
 --------
